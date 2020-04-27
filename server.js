@@ -285,7 +285,7 @@ client.on('message', message => {
 
 
 client.on('message' , message => {
-if(message.content.startsWith("-user")) {
+if(message.content.startsWith(prefix+"user")) {
     let user = message.mentions.users.first() || message.author;
     const joineddiscord = (user.createdAt.getDate() + 1) + '-' + (user.createdAt.getMonth() + 1) + '-' + user.createdAt.getFullYear() + ' | ' + user.createdAt.getHours() + ':' + user.createdAt.getMinutes() + ':' + user.createdAt.getSeconds();
     message.delete();//by aboroh
